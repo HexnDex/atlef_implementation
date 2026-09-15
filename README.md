@@ -52,7 +52,7 @@ atlef-implementation/
 ## Installation
 
 ```bash
-git clone https://github.com/HexnDex/atlef_implementation
+git clone https://github.com/<your-username>/atlef-implementation
 cd atlef-implementation
 pip install -r requirements.txt
 ```
@@ -61,10 +61,13 @@ Python 3.10+ and a CUDA-capable GPU are recommended; all reported results were p
 
 ## Weights
 
-ATLEF uses the same Stable Diffusion 1.5 checkpoint as the baseline it builds on. Download it from either:
+ATLEF uses the same Stable Diffusion 1.5 checkpoint as the baseline it builds on. Download it from:
 
-- The official source: [runwayml/stable-diffusion-v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5) (Hugging Face)
-- The exact checkpoint Hu et al. used: [Google Drive link](https://drive.google.com/file/d/1lSeumzN-JrhyAacOPlh1ljAv6MKffogU/view?usp=sharing) (from their repository)
+- [Comfy-Org/stable-diffusion-v1-5-archive](https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive) (Hugging Face), a hash-identical re-upload of the original RunwayML weights. The original `runwayml/stable-diffusion-v1-5` page has a history of intermittent downtime, this archive is the more reliable source.
+
+This archive hosts `v1-5-pruned-emaonly.safetensors`. The thesis experiments were run against `v1-5-pruned.ckpt` (EMA + non-EMA weights); for generation and inversion, which is all this pipeline does, the two are functionally equivalent, the non-EMA weights only matter for continued training.
+
+Hu et al.'s repository ([github.com/HXX5656/mas_GRDH](https://github.com/HXX5656/mas_GRDH)) also links a copy of the checkpoint if you'd prefer their source directly.
 
 Neither checkpoint is included in this repository.
 
