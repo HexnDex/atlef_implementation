@@ -32,28 +32,29 @@ To generate and invert images, you'll need Stable Diffusion 1.5 and the DPM-Solv
 ## Repository structure
 
 ```
-atlef-implementation/
+atlef_implementation/
 ├── README.md
 ├── requirements.txt
+├── LICENSE
 ├── assets/
 │   └── architecture-diagram.png
 └── src/
-    ├── constants.py          # A.1 — latent geometry, ECC parameters
-    ├── encoder.py             # A.2 — core encoding algorithm
-    ├── decoder.py             # A.3 — core decoding algorithm
-    ├── attacks.py             # A.4 — 18 attack simulation functions
+    ├── constants.py        # A.1 — latent geometry, ECC parameters
+    ├── encoder.py           # A.2 — core encoding algorithm
+    ├── decoder.py           # A.3 — core decoding algorithm
+    ├── attacks.py           # A.4 — 18 attack simulation functions
     └── steganalysis/
-        ├── srm_kernels.py     # SRM filter bank generator (used by YeNet)
-        ├── srnet.py           # A.5 — SRNet (Boroumand et al., 2019)
-        ├── yenet.py            # A.5 — YeNet (Ye, Ni & Yi, 2017)
-        └── xunet.py            # A.5 — XuNet (Xu, Wu & Shi, 2016)
+        ├── srm_kernels.py   # SRM filter bank generator (used by YeNet)
+        ├── srnet.py         # A.5 — SRNet (Boroumand et al., 2019)
+        ├── yenet.py         # A.5 — YeNet (Ye, Ni & Yi, 2017)
+        └── xunet.py         # A.5 — XuNet (Xu, Wu & Shi, 2016)
 ```
 
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/atlef-implementation
-cd atlef-implementation
+git clone https://github.com/HexnDex/atlef_implementation
+cd atlef_implementation
 pip install -r requirements.txt
 ```
 
@@ -67,9 +68,7 @@ ATLEF uses the same Stable Diffusion 1.5 checkpoint as the baseline it builds on
 
 This archive hosts `v1-5-pruned-emaonly.safetensors`. The thesis experiments were run against `v1-5-pruned.ckpt` (EMA + non-EMA weights); for generation and inversion, which is all this pipeline does, the two are functionally equivalent, the non-EMA weights only matter for continued training.
 
-Hu et al.'s repository ([github.com/HXX5656/mas_GRDH](https://github.com/HXX5656/mas_GRDH)) also links a copy of the checkpoint if you'd prefer their source directly.
-
-Neither checkpoint is included in this repository.
+The checkpoint is not included in this repository.
 
 ## Usage
 
@@ -173,3 +172,7 @@ And, since ATLEF builds directly on their mapping module and generation pipeline
   doi     = {10.1109/TIFS.2024.3444311}
 }
 ```
+
+## License
+
+This repository is released under the [MIT License](LICENSE). The code depends on and interoperates with Hu et al.'s repository (see [Built on](#built-on)); refer to their repository for the license terms covering their code and weights.
