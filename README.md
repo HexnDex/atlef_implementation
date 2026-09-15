@@ -1,5 +1,7 @@
 # ATLEF: Adaptive Two-Layer Error Correction Framework
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22779626.svg)](https://doi.org/10.5281/zenodo.22779626)
+
 Core implementation of **ATLEF**, a training-free framework for payload-capacity robust generative image steganography, from the MSc thesis:
 
 **"ATLEF: Payload-Capacity Robust Generative Image Steganography"**
