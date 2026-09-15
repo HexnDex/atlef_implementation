@@ -52,7 +52,7 @@ atlef-implementation/
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/atlef-implementation
+git clone https://github.com/HexnDex/atlef_implementation
 cd atlef-implementation
 pip install -r requirements.txt
 ```
