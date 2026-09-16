@@ -1,0 +1,8 @@
+group,level,n_cover,n_stego,fid_cover_stego,cover_baseline_fid,cover_baseline_std,excess_over_baseline
+overall,all,1050,1050,56.477,87.462,0.841,-30.985
+payload_1024,payload,1050,351,110.502,87.462,0.841,23.04
+payload_2048,payload,1050,351,94.82,87.462,0.841,7.358
+payload_4096,payload,1050,348,90.507,87.462,0.841,3.045
+COCO,dataset,350,350,96.321,87.462,0.841,8.859
+Flickr8K,dataset,350,350,115.982,87.462,0.841,28.52
+DeskGPT,dataset,350,350,93.788,87.462,0.841,6.326
