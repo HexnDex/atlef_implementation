@@ -27,7 +27,7 @@ ATLEF's contribution is the two-layer error correction pipeline, the random-padd
 
 ## Scope
 
-This repository contains the components that are ATLEF-specific and documented in Appendix A of the thesis. It does not include a top-level orchestration script, dependency lock file, or dataset/prompt manifests, that package was explicitly scoped out during the thesis review process (see Appendix A and Section 3.5.4). What's here is sufficient to inspect, verify, and reuse the core algorithm; it is not a one-command reproduction of every figure and table in the thesis.
+This repository contains the components that are ATLEF-specific and documented in Appendix A of the thesis. It includes a top-level orchestration script (run_pipeline.py), experiment configuration and seed formulas (experiment_config.py), dataset and prompt manifests (manifests/), principal result files with checksums (results/), and a verified-compatible dependency file (requirements-lock.txt). A true historical lock file from the original Colab session is not recoverable; see requirements-lock.txt for details. What's here is sufficient to inspect, verify, and reuse the core algorithm; it is not a one-command reproduction of every figure and table in the thesis.
 
 To generate and invert images, you'll need Stable Diffusion 1.5 and the DPM-Solver++ pipeline set up per Hu et al.'s repository above. This repository's code operates on the resulting latent tensors.
 
