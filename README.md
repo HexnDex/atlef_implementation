@@ -37,19 +37,37 @@ To generate and invert images, you'll need Stable Diffusion 1.5 and the DPM-Solv
 atlef_implementation/
 ├── README.md
 ├── requirements.txt
+├── requirements-lock.txt
 ├── LICENSE
+├── run_pipeline.py
+├── experiment_config.py
+├── compute_checksums.py
 ├── assets/
 │   └── architecture-diagram.png
+├── manifests/
+│   ├── coco_prompts.json
+│   ├── flickr8k_prompts.txt
+│   ├── deskgpt_prompts.txt
+│   ├── train_images_index.csv
+│   └── test_images_index.csv
+├── results/
+│   ├── checksums.txt
+│   ├── fast_after_COCO.csv
+│   ├── fast_after_Flickr8K.csv
+│   ├── fast_after_DeskGPT.csv
+│   ├── detectability_results.csv
+│   ├── fid_results.csv
+│   └── kid_results.csv
 └── src/
-    ├── constants.py        # A.1 — latent geometry, ECC parameters
-    ├── encoder.py           # A.2 — core encoding algorithm
-    ├── decoder.py           # A.3 — core decoding algorithm
-    ├── attacks.py           # A.4 — 18 attack simulation functions
+    ├── constants.py
+    ├── encoder.py
+    ├── decoder.py
+    ├── attacks.py
     └── steganalysis/
-        ├── srm_kernels.py   # SRM filter bank generator (used by YeNet)
-        ├── srnet.py         # A.5 — SRNet (Boroumand et al., 2019)
-        ├── yenet.py         # A.5 — YeNet (Ye, Ni & Yi, 2017)
-        └── xunet.py         # A.5 — XuNet (Xu, Wu & Shi, 2016)
+        ├── srm_kernels.py
+        ├── srnet.py
+        ├── yenet.py
+        └── xunet.py
 ```
 
 ## Installation
